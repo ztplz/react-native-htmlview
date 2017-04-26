@@ -34,8 +34,8 @@ export default class AutoSizedImage extends React.Component {
   render() {
     const finalSize = {};
     if (this.state.width > width) {
-      finalSize.width = width;
-      const ratio = width / this.state.width;
+      finalSize.width = width - 20;
+      const ratio = finalSize.width / this.state.width;
       finalSize.height = this.state.height * ratio;
     }
     const style = Object.assign(
