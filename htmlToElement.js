@@ -19,8 +19,9 @@ const Img = props => {
     width,
     height,
   };
+  let regex = /.*\/\//;
   const source = {
-    uri: props.attribs.src,
+   	uri: props.attribs.src.replace(regex, 'http://'),
     width,
     height,
   };
