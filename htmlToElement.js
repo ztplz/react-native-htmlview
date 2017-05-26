@@ -19,9 +19,9 @@ const Img = props => {
     width,
     height,
   };
-  let regex = /.*\/\//;
+  const regex = /^\/\/.*/;
   const source = {
-   	uri: props.attribs.src.replace(regex, 'http://'),
+   	uri: regex.test(props.attribs.src)? 'http:' + props.attribs.src : props.attribs.src,
     width,
     height,
   };
@@ -112,4 +112,3 @@ export default function htmlToElement(rawHtml, opts, done) {
   parser.write(rawHtml);
   parser.done();
 }
-

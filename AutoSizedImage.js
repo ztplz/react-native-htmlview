@@ -41,7 +41,8 @@ export default class AutoSizedImage extends React.Component {
     const style = Object.assign(
       baseStyle,
       this.props.style,
-      this.state,
+      {width: 200, height: 200},
+      // this.state,
       finalSize
     );
     let source = {};
