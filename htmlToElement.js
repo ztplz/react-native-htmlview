@@ -19,12 +19,14 @@ const Img = props => {
     width,
     height,
   };
+
   const regex = /^\/\/.*/;
   const source = {
-   	uri: regex.test(props.attribs.src)? 'http:' + props.attribs.src : props.attribs.src,
+   uri: regex.test(props.attribs.src)? 'http:' + props.attribs.src : props.attribs.src,
     width,
     height,
   };
+  console.log(source);
   return (
     <AutoSizedImage source={source} style={imgStyle} />
   );
